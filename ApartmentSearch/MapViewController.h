@@ -17,6 +17,5 @@
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic,strong) NSMutableArray *posts;
 @property (nonatomic,strong)CLLocationManager *locManager;
-
--(void)listTapped;
+-(void)removeCalloutView;
 @end

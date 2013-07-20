@@ -225,10 +225,6 @@
     
 }
 
--(void)listTapped{
-    NSLog(@"list tapped");
-    
-}
 
 - (void)didReceiveMemoryWarning
 {

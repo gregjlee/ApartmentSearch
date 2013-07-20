@@ -1,5 +1,5 @@
 //
-//  FIlterViewController.h
+//  FilterViewController.h
 //  ApartmentSearch
 //
 //  Created by Gregory Lee on 7/19/13.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FIlterViewController : UIViewController
+@interface FilterViewController : UIViewController
+- (IBAction)cancelTapped:(id)sender;
+- (IBAction)searchTapped:(id)sender;
 
 @end

@@ -10,6 +10,7 @@
 #import "PostListViewController.h"
 #import "PostDetailViewController.h"
 #import "MapViewController.h"
+#import "FilterViewController.h"
 @interface MainContainerViewController ()
 
 @end
@@ -24,7 +25,10 @@
     }
     return self;
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self configureNavButtons];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -33,7 +37,6 @@
     [self configurePostListViewController];
     _currentViewController=_mapViewController;
     [self.view addSubview:self.currentViewController.view];
-    [self configureNavButtons];
     // Do any additional setup after loading the view from its nib.
 }
 -(void)configureMapViewController{
@@ -56,7 +59,8 @@
     return CGRectMake(0, CGRectGetMaxY(navFrame), CGRectGetMaxX(navFrame), self.view.bounds.size.height-navFrame.size.height);
 }
 -(void)configureNavButtons{
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"list" style:UIBarButtonItemStyleBordered target:self action:@selector(rightTapped:)];
+    NSString *rightTitle=([_currentViewController isKindOfClass:[MapViewController class]])?@"List":@"Map";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:rightTitle style:UIBarButtonItemStyleBordered target:self action:@selector(rightTapped:)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"filters" style:UIBarButtonItemStyleBordered target:self action:@selector(leftTapped:)];
 }
 
@@ -67,7 +71,10 @@
 }
 
 -(void)leftTapped:(id)sender{
-    
+    FilterViewController *filterVC=[[FilterViewController alloc]initWithNibName:@"FilterViewController" bundle:nil];
+    [self presentViewController:filterVC animated:YES completion:^{
+        
+    }];
 }
 - (BOOL)shouldAutomaticallyForwardRotationMethods{
     return YES;
@@ -87,7 +94,6 @@
     }
     [aNewViewController.view layoutIfNeeded];
     
-    [self.currentViewController willMoveToParentViewController:nil];
         
     __weak __block MainContainerViewController *weakSelf=self;
     [self transitionFromViewController:self.currentViewController
@@ -100,6 +106,9 @@
                                 [aNewViewController didMoveToParentViewController:weakSelf];
                                 
                                 weakSelf.currentViewController=aNewViewController;
+                                if (isMap) {
+                                    [_mapViewController removeCalloutView];
+                                }
                             }];
 }
 #pragma mark mapDelegate

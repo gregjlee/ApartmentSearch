@@ -1,18 +1,18 @@
 //
-//  FIlterViewController.m
+//  FilterViewController.m
 //  ApartmentSearch
 //
 //  Created by Gregory Lee on 7/19/13.
 //  Copyright (c) 2013 Gregory Lee. All rights reserved.
 //
 
-#import "FIlterViewController.h"
+#import "FilterViewController.h"
 
-@interface FIlterViewController ()
+@interface FilterViewController ()
 
 @end
 
-@implementation FIlterViewController
+@implementation FilterViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,4 +35,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)cancelTapped:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+- (IBAction)searchTapped:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
 @end

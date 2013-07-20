@@ -40,8 +40,8 @@
 		C1ABE3AF1799C18400C9C334 /* PostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1ABE3AD1799C18400C9C334 /* PostDetailViewController.xib */; };
 		C1ABE3B21799D9CD00C9C334 /* PostDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1ABE3B11799D9CD00C9C334 /* PostDetailView.m */; };
 		C1ABE3B41799D9E300C9C334 /* PostDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1ABE3B31799D9E300C9C334 /* PostDetailView.xib */; };
-		C1ABE3BD179A01FC00C9C334 /* FIlterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1ABE3BB179A01FB00C9C334 /* FIlterViewController.m */; };
-		C1ABE3BE179A01FC00C9C334 /* FIlterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1ABE3BC179A01FC00C9C334 /* FIlterViewController.xib */; };
+		C1ABE3C2179A10F600C9C334 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1ABE3C0179A10F500C9C334 /* FilterViewController.m */; };
+		C1ABE3C3179A10F600C9C334 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1ABE3C1179A10F600C9C334 /* FilterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,9 +96,9 @@
 		C1ABE3B11799D9CD00C9C334 /* PostDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailView.m; sourceTree = "<group>"; };
 		C1ABE3B31799D9E300C9C334 /* PostDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostDetailView.xib; sourceTree = "<group>"; };
 		C1ABE3B81799F10400C9C334 /* ChildVCProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildVCProtocol.h; sourceTree = "<group>"; };
-		C1ABE3BA179A01FB00C9C334 /* FIlterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIlterViewController.h; sourceTree = "<group>"; };
-		C1ABE3BB179A01FB00C9C334 /* FIlterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIlterViewController.m; sourceTree = "<group>"; };
-		C1ABE3BC179A01FC00C9C334 /* FIlterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FIlterViewController.xib; sourceTree = "<group>"; };
+		C1ABE3BF179A10F500C9C334 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
+		C1ABE3C0179A10F500C9C334 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
+		C1ABE3C1179A10F600C9C334 /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
 		E68EB2EC444F400EAE1B7F9A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -147,7 +147,6 @@
 				C1ABE3B11799D9CD00C9C334 /* PostDetailView.m */,
 				C1ABE3B31799D9E300C9C334 /* PostDetailView.xib */,
 				C1ABE3AD1799C18400C9C334 /* PostDetailViewController.xib */,
-				C1ABE3BC179A01FC00C9C334 /* FIlterViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -157,8 +156,6 @@
 			children = (
 				C12AD5571798C10D00BAB540 /* MainContainerViewController.h */,
 				C12AD5581798C10D00BAB540 /* MainContainerViewController.m */,
-				C1ABE3BA179A01FB00C9C334 /* FIlterViewController.h */,
-				C1ABE3BB179A01FB00C9C334 /* FIlterViewController.m */,
 				C15C180517974114007E1624 /* MapViewController.h */,
 				C15C180617974114007E1624 /* MapViewController.m */,
 				C15C18221798AA30007E1624 /* PostListViewController.h */,
@@ -166,6 +163,9 @@
 				C1ABE3AB1799C18400C9C334 /* PostDetailViewController.h */,
 				C1ABE3AC1799C18400C9C334 /* PostDetailViewController.m */,
 				C1ABE3B81799F10400C9C334 /* ChildVCProtocol.h */,
+				C1ABE3BF179A10F500C9C334 /* FilterViewController.h */,
+				C1ABE3C0179A10F500C9C334 /* FilterViewController.m */,
+				C1ABE3C1179A10F600C9C334 /* FilterViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -303,7 +303,7 @@
 				C12AD55B1798C10D00BAB540 /* MainContainerViewController.xib in Resources */,
 				C1ABE3AF1799C18400C9C334 /* PostDetailViewController.xib in Resources */,
 				C1ABE3B41799D9E300C9C334 /* PostDetailView.xib in Resources */,
-				C1ABE3BE179A01FC00C9C334 /* FIlterViewController.xib in Resources */,
+				C1ABE3C3179A10F600C9C334 /* FilterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +358,7 @@
 				C12AD55A1798C10D00BAB540 /* MainContainerViewController.m in Sources */,
 				C1ABE3AE1799C18400C9C334 /* PostDetailViewController.m in Sources */,
 				C1ABE3B21799D9CD00C9C334 /* PostDetailView.m in Sources */,
-				C1ABE3BD179A01FC00C9C334 /* FIlterViewController.m in Sources */,
+				C1ABE3C2179A10F600C9C334 /* FilterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
